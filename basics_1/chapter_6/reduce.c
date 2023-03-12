@@ -1,17 +1,19 @@
-// Name: gcd
-// Purpose: find greatest common denominator
+// Name: reduce
+// Purpose: reduce fraction
 // Author: Christian Brewer
-// Date: March 11 2023
+// Date: March 12 2023
 
 #include <stdio.h>
 
 int main(void)
 {
-    int m, n, n2;
+    int m, n, n2, num, den;
 
-    printf("Enter two intergers to calculate their GCD: ");
-    scanf("%d %d", &m, &n);
+    printf("Enter a fraction to reduce to lowest terms (x/x): ");
+    scanf("%d/%d", &m, &n);
 
+    num = m;
+    den = n;
     // loop until n == 0
     while (n != 0)
     {
@@ -23,8 +25,9 @@ int main(void)
         m = n2;
     }
 
-    // print m, which is GCD
-    printf("GCD is %d", m);
+    num /= m;
+    den /= m;
+    printf("%d/%d\n", num, den);
 
     return 0;
 }
