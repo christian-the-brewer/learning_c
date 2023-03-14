@@ -15,7 +15,7 @@ int main(void)
     scanf("%d", &start);
 
     for (i = 1; i < start; i++)
-        printf("  ");
+        printf("    ");
 
     for (i = 1; i <= days; i++)
     {
@@ -23,6 +23,7 @@ int main(void)
         if ((start + i - 1) % 7 == 0)
             printf("\n");
     }
+    printf("\n");
 
     return 0;
 }
